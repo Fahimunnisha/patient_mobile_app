@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Language</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1c1c1c, #00bfa6);
+            font-family: Arial, sans-serif;
+        }
+
+        .logo-container {
+            background: #0e9b8c;
+            padding: 20px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .language-container {
+            text-align: center;
+        }
+
+        .language-container h1 {
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        .language-container button {
+            display: block;
+            width: 200px;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 18px;
+            color: #fff;
+            background: #37474f;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .language-container button:hover {
+            background: #455a64;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="language-container">
+        <h1>Choose language</h1>
+        <button onclick="chooseLanguage('tamil')">Tamil</button>
+        <button onclick="chooseLanguage('english')">English</button>
+    </div>
+    <script>
+        function chooseLanguage(language) {
+            alert('You chose ' + language);
+            // Redirect based on the chosen language
+            if (language === 'english') {
+                window.location.href = 'signup.html'; // Redirect to the sign-in page
+            } else if (language === 'tamil') {
+                // Add redirection or actions for Tamil here if needed
+                alert('Tamil option selected');
+            }
+        }
+    </script>
+</body>
+</html>
